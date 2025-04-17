@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="950.0" stylesheets="@app.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pruebamongodbcss.AppController">
+   <children>
+      <BorderPane layoutY="7.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="435.0" styleClass="right-bar" stylesheets="@app.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" text="Fichaje">
+                           <font>
+                              <Font name="Cambria Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text=" Veterinaria" textFill="#000000a3">
+                           <font>
+                              <Font name="Cambria" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="CajaBusqueda" alignment="CENTER" prefHeight="65.0" prefWidth="200.0" styleClass="search-box" stylesheets="@app.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <MFXTextField alignment="TOP_CENTER" floatMode="ABOVE" minHeight="40.0" prefWidth="250.0" promptText="Escribe aquí para buscar" styleClass="transparent" stylesheets="@app.css">
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </MFXTextField>
+                        <MFXButton prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #828282;" styleClass="search-button" stylesheets="@app.css" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <MFXScrollPane />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

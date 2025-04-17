@@ -1,0 +1,14 @@
+FROM openjdk:21-jdk-slim
+
+WORKDIR /app
+
+# Copiar clases compiladas
+COPY ../target/classes/ ./classes
+
+# Copiar librerías Mongo
+COPY ../libs/ ./libs
+
+EXPOSE 50001
+
+# Ejecutar con todas las dependencias en el classpath
+CMD ["java", "-cp", "classes:libs/*", "com.example.pruebamongodbcss.MiServidor2"]

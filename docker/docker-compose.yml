@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # Base de datos para gestión clínica
+  mongodb-clinica:
+    image: mongo:latest
+    container_name: mongodb-clinica
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-clinica-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - app-network
+
+  # Base de datos para gestión de inventario
+  mongodb-inventario:
+    image: mongo:latest
+    container_name: mongodb-inventario
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb-inventario-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - app-network
+
+  # Base de datos para términos
+  mongodb-terminos:
+    image: mongo:latest
+    container_name: mongodb-terminos
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongodb-terminos-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - app-network
+
+  # Servidor de gestión clínica (puerto 50000)
+  servidor-clinica:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile-clinica
+    container_name: servidor-clinica
+    ports:
+      - "50000:50000"
+    depends_on:
+      - mongodb-clinica
+    networks:
+      - app-network
+
+  # Servidor de gestión de inventario (puerto 50001)
+  servidor-inventario:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile-inventario
+    container_name: servidor-inventario
+    ports:
+      - "50001:50001"
+    depends_on:
+      - mongodb-inventario
+    networks:
+      - app-network
+
+volumes:
+  mongodb-clinica-data:
+  mongodb-inventario-data:
+  mongodb-terminos-data:
+
+networks:
+  app-network:
+    driver: bridge 

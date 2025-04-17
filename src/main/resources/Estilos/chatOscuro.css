@@ -1,0 +1,78 @@
+/* === FONDO GENERAL === */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #0f0f1c, #1a1a2e);
+    -fx-text-fill: white;
+}
+
+/* ScrollPane */
+.chat-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* === ÁREA DE TEXTO === */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #888;
+    -fx-background-radius: 20;
+    -fx-border-color: transparent;
+    -fx-padding: 8 14;
+}
+
+/* === BOTONES === */
+.button {
+    -fx-background-color: #4e60ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 6 16;
+}
+
+.button:hover {
+    -fx-background-color: #6a79ff;
+}
+
+/* === MENSAJES PROPIOS === */
+.mensaje-propio {
+    -fx-background-color: #3949ab;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-radius: 20;
+    -fx-font-size: 13px;
+}
+
+/* === MENSAJES RECIBIDOS === */
+.mensaje-ajeno {
+    -fx-background-color: #2b2b3d;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-radius: 20;
+    -fx-font-size: 13px;
+}
+
+/* VBox mensajes */
+VBox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-background-color: transparent; /* quita el fondo gris */
+}
+
+
+
+.boton-circulo {
+    -fx-background-color: #ff5f56; /* rojo estilo Mac */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+    -fx-padding: 0;
+}
+
+.boton-circulo:hover {
+    -fx-background-color: #e0483e;
+}

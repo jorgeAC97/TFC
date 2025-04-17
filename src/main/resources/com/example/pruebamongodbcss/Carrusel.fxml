@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane fx:id="root"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.pruebamongodbcss.Carrusel.CarruselController"
+            style="-fx-background-color: transparent;">
+
+    <!-- StackPane para que ocupe todo el espacio de la ventana y center los hijos -->
+    <StackPane layoutX="0" layoutY="0"
+               AnchorPane.topAnchor="0.0"
+               AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0"
+               AnchorPane.bottomAnchor="0.0">
+
+        <!-- La "tarjeta" blanca con bordes redondeados y sombra suave -->
+        <AnchorPane fx:id="cardPane"
+                    prefWidth="900" prefHeight="500"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    style="
+                      -fx-background-color: white;
+                      -fx-background-radius: 40;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 30, 0, 0, 10);
+                      -fx-border-radius: 40;
+                    ">
+
+            <!-- Label del título (p.ej. "Netherland") -->
+            <Label fx:id="titleLabel"
+                   layoutX="30" layoutY="30"
+                   style="
+                       -fx-font-size: 28px;
+                       -fx-text-fill: black;
+                       -fx-background-color: rgba(255,255,255,0.3);
+                       -fx-padding: 5 10;
+                       -fx-background-radius: 8;
+                   " />
+
+            <!-- Botón/Label para cerrar (X) en la esquina superior derecha -->
+            <Label text="X"
+                   fx:id="closeLabel"
+                   style="
+                       -fx-font-size: 24px;
+                       -fx-text-fill: #666;
+                       -fx-cursor: hand;
+                   "
+                   layoutX="860" layoutY="20"
+                   onMouseClicked="#closeWindow"/>
+
+            <!-- ImageView principal, anclado con márgenes para dejar hueco para el título y "X" -->
+            <ImageView fx:id="mainImageView"
+                       preserveRatio="false"
+                       AnchorPane.topAnchor="80.0"
+                       AnchorPane.leftAnchor="30.0"
+                       AnchorPane.rightAnchor="30.0"
+                       AnchorPane.bottomAnchor="30.0" />
+        </AnchorPane>
+    </StackPane>
+</AnchorPane>

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Iso&display=swap');
+
+
+.poppins-extralight {
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+  }
+  
+  .roboto-mono-Hola {
+	font-family: "Roboto Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
+  }
+
+
+  .rubik-iso-regular {
+	font-family: "Rubik Iso", system-ui;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+
+
+
+
+.bloqueItems{
+	-fx-padding-left: 15px;
+
+}
+
+.tituloPrincipal{
+	-fx-font-family: "Rubik Iso";
+	-fx-font-size: 20px;
+	-fx-text-fill: #ffffff;
+}
+
+.collapsed .tituloPrincipal{
+    -fx-padding: 5px; /* Menos padding para centrar íconos cuando está colapsado */
+	-fx-alignment: CENTER; /* opcional: centrar todo si quieres que el ícono quede bien en medio */
+}
+
+
+.collapsed .itemMenu {
+    -fx-padding: 10px; /* Menos padding para centrar íconos cuando está colapsado */
+	-fx-alignment: CENTER; /* opcional: centrar todo si quieres que el ícono quede bien en medio */
+
+}
+
+.itemMenu {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-font-family: "Roboto Mono";
+    -fx-font-size: 16px;
+    -fx-text-fill: #b3b3b3d9;
+	-fx-padding: 10px 10px 10px 20px;
+    
+    /* Padding: arriba, derecha, abajo, izquierda */
+    -fx-padding: 10px 10px 10px 20px;
+
+    /* Alineación del contenido al inicio */
+    -fx-alignment: CENTER_LEFT;
+}
+
+.itemMenu:hover {
+    -fx-background-color: #2a2a2aa5;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+}
+
+
+.panelBordeado{
+	-fx-background-color: rgba(15,28,33,0.85);
+	-fx-background-radius: 0 0 15 15;
+	-fx-padding: 0px 50px 0px 50px;
+	-fx-border: 0 50px 0 50px;
+}
+
+
+
+
+.fondoMenuPrincipal{
+	-fx-background-color: linear-gradient(to  right bottom, #0F2027 0%, #203A43 70%, #2C5364 100%);
+}
+
+
+
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: rgba(70, 70, 70, 0.962);
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+.chosen-fruit-card{
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30;
+}
+
+.comboBox{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 30;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.free-delivery-card{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 30;
+}
+
+.shopping-online-card{
+    -fx-background-color: #BAEAC3;
+    -fx-background-radius: 30;
+}
+
+.fruit-item{
+    -fx-background-color: #FFFFFF;
+        -fx-background-radius: 30;
+}
+
+
+.mfx-button {
+	-fx-background-color: #aaff00;
+}
+
+.mfx-button .mfx-ripple-generator {
+	-mfx-ripple-radius: 40;
+	-mfx-auto-clip: true;
+}
+
+.mfx-button .text {
+	-fx-font-smoothing-type: gray;
+}
+
+#custom {
+	-fx-background-color: #006BFF;
+	-fx-text-fill: white
+}
+
+.outline-button {
+	-fx-background-color: transparent;
+	-fx-border-color: -mfx-purple;
+	-fx-border-radius: 3;
+
+	-fx-text-fill: -mfx-purple;
+}
+
+.outline-button:hover,
+.outline-button:focused {
+	-fx-background-color: -mfx-purple;
+	-fx-text-fill: white;
+}
+
+
+.link-button {
+	-fx-background-color: transparent;
+	-fx-border-radius: 3;
+	-fx-text-fill: #0096FF;
+	-fx-underline: true;
+	-fx-cursor: hand;
+}
+
+.link-button:armed,
+.link-button:focused {
+	-fx-border-color: #006BFF;
+	-fx-text-fill: #006BFF;
+}
+
+.link-button .mfx-ripple-generator {
+	-mfx-ripple-color: #D9E9FF;
+}
